@@ -3,6 +3,6 @@
 	import './main.css';
 </script>
 
-<main class="container-fluid">
+<main>
 	<Home />
 </main>
