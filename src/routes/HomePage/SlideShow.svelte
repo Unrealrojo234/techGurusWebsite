@@ -76,7 +76,7 @@
 
 <br />
 
-<h2 style="color: yellowgreen;">Our Team 💪🏼</h2>
+<h2 class="display-4 mb-4" style="color: yellowgreen;">Our Team 💪🏼</h2>
 
 <div class="embla">
 	<div class="embla__viewport" bind:this={viewport}>

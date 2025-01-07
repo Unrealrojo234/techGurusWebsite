@@ -21,7 +21,7 @@
 <main>
 	<br /><br />
 
-	<h2 style="color: yellowgreen;">Our Expertise</h2>
+	<h2 class="display-4 mb-4" style="color: yellowgreen;">Our Expertise</h2>
 	<p>
 		We are a team of tech enthusiasts with a diverse range of skills and expertise. Our members come
 		from different backgrounds and have a wide variety of interests, which allows us to tackle a
@@ -40,7 +40,7 @@
 		<li>Cyber security</li>
 	</ul>
 	<div>
-		<h2 style="color: yellowgreen;">Tools</h2>
+		<h2 class="display-4 mb-4" style="color: yellowgreen;">Tools</h2>
 		{#await skills}
 			<p>loading...</p>
 		{:then skills}
