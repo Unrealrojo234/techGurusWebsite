@@ -35,16 +35,14 @@
 </script>
 
 <section class="py-5">
-	<div class="container">
+	<div>
 		<div class="row align-items-center">
 			<!-- Form Area -->
-			<div class="col-lg-8 mx-auto">
+			<div>
 				<h1 class="display-4 mb-4" style="color: yellowgreen;">Let's connect</h1>
 
-				<form onsubmit={sendEmail} class="p-4 rounded">
-					<div class="col-lg-10 mx-auto">
-						<div class="text-white mb-4"></div>
-
+				<form onsubmit={sendEmail} class="p-2 rounded">
+					<div>
 						<div class="row g-3">
 							<div class="col-sm-6">
 								<input
