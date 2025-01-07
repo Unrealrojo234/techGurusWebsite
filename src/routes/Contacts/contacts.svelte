@@ -1,11 +1,11 @@
 <script>
 	import { fade } from 'svelte/transition';
 
+	import Swal from 'sweetalert2';
+
 	let name = '';
 	let email = '';
 	let message = '';
-	let isSubmitting = false;
-	let submitStatus = null;
 
 	const sendEmail = (e) => {
 		e.preventDefault();
@@ -14,8 +14,23 @@
 			.then((res) => res.json())
 			.then((data) => {
 				//console.log(data);
+				Swal.fire({
+					title: 'Delivered',
+					text: 'Message delivered successfully',
+					icon: 'success'
+				});
+
+				//clearing the input fields
+				name = message = email = '';
 			})
-			.catch((err) => console.error(err));
+			.catch((err) => {
+				console.error(err);
+				Swal.fire({
+					title: 'Error',
+					text: 'An error occured, please retry again!',
+					icon: 'error'
+				});
+			});
 	};
 </script>
 
@@ -26,7 +41,7 @@
 			<div class="col-lg-8 mx-auto">
 				<h1 class="display-4 mb-4" style="color: yellowgreen;">Let's connect</h1>
 
-				<form on:submit={sendEmail} class="p-4 rounded">
+				<form onsubmit={sendEmail} class="p-4 rounded">
 					<div class="col-lg-10 mx-auto">
 						<div class="text-white mb-4"></div>
 
@@ -64,22 +79,10 @@
 							></textarea>
 						</div>
 
-						<button type="submit" disabled={isSubmitting} class="btn w-100 mt-3 custom-button">
+						<button type="submit" class="btn w-100 mt-3 custom-button">
 							Send
 							<i class="fa-sharp fa-solid fa-paper-plane fa-2xs ms-2"></i>
 						</button>
-
-						{#if submitStatus === 'success'}
-							<div transition:fade class="alert alert-success mt-3 text-center">
-								Message sent successfully!
-							</div>
-						{/if}
-
-						{#if submitStatus === 'error'}
-							<div transition:fade class="alert alert-danger mt-3 text-center">
-								Failed to send message. Please try again.
-							</div>
-						{/if}
 					</div>
 				</form>
 			</div>
