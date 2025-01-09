@@ -64,8 +64,8 @@
 		justify-content: center;
 		align-items: center;
 		position: absolute;
-		left: 85%;
-		top: 1%;
+		left: 3%;
+		top: 1.5%;
 		cursor: pointer;
 		font-size: var(--size);
 		user-select: none;
