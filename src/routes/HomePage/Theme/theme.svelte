@@ -63,9 +63,9 @@
 		--size: 30px;
 		justify-content: center;
 		align-items: center;
-		position: absolute;
-		left: 3%;
-		top: 1.5%;
+		position: fixed;
+		left: 85%;
+		top: 1%;
 		cursor: pointer;
 		font-size: var(--size);
 		user-select: none;
