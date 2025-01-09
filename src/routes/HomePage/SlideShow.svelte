@@ -15,7 +15,8 @@
 		'OTIENO272',
 		'Rosalie-p',
 		'Mary-desig',
-		'Fancy-nateku'
+		'Fancy-nateku',
+		'Chegejohnngatia'
 	];
 
 	let usersDetailsObject = writable([]);
