@@ -3,9 +3,9 @@
 
 	import Swal from 'sweetalert2';
 
-	let name = '';
-	let email = '';
-	let message = '';
+	let name = $state('');
+	let email = $state('');
+	let message = $state('');
 
 	const sendEmail = (e) => {
 		e.preventDefault();
@@ -32,6 +32,26 @@
 				});
 			});
 	};
+
+	function getSavedTheme() {
+		try {
+			const savedTheme = localStorage.getItem('theme');
+			return savedTheme || 'light'; // Return saved theme or default to 'light'
+		} catch (error) {
+			console.warn('Error accessing localStorage:', error);
+			return 'light'; // Return default theme if localStorage fails
+		}
+	}
+
+	let foregroundColor = $state('');
+
+	setInterval(() => {
+		if (getSavedTheme() == 'dark') {
+			foregroundColor = 'aliceblue';
+		} else {
+			foregroundColor = 'black';
+		}
+	}, 1000);
 </script>
 
 <section class="py-5">
@@ -47,6 +67,7 @@
 							<div class="col-sm-6">
 								<input
 									name="name"
+									style="color: {foregroundColor};"
 									type="text"
 									placeholder="Your name"
 									bind:value={name}
@@ -59,6 +80,7 @@
 								<input
 									bind:value={email}
 									required
+									style="color: {foregroundColor};"
 									name="email"
 									type="email"
 									placeholder="Email address"
@@ -71,13 +93,14 @@
 							<textarea
 								bind:value={message}
 								required
+								style="color: {foregroundColor};"
 								name="message"
 								placeholder="Write message"
 								class="form-control custom-textarea"
 							></textarea>
 						</div>
 
-						<button type="submit" class="btn w-100 mt-3 custom-button">
+						<button type="submit" class="btn w-100 mt-3 btn-outline-success">
 							Send
 							<i class="fa-sharp fa-solid fa-paper-plane fa-2xs ms-2"></i>
 						</button>
@@ -91,17 +114,15 @@
 <style>
 	.custom-input,
 	.custom-textarea {
-		background-color: #0c0c0c;
-		color: aliceblue;
+		background: none;
 		border: 1px solid teal;
 	}
 
 	.custom-input:focus,
 	.custom-textarea:focus {
-		background-color: #0c0c0c;
+		background: none;
 		border-color: teal;
 		box-shadow: none;
-		color: aliceblue;
 	}
 
 	.custom-textarea {
@@ -111,14 +132,12 @@
 
 	.custom-button {
 		border: 1px solid teal;
-		color: white;
 		transition: background-color 0.2s;
 	}
 
 	.custom-button:hover {
 		background-color: rgba(0, 128, 128, 0.2);
 		border-color: teal;
-		color: white;
 	}
 
 	.custom-button:disabled {
