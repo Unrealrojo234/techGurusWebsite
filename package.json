@@ -32,6 +32,7 @@
 	"dependencies": {
 		"embla-carousel-autoplay": "^8.5.1",
 		"resend": "^4.0.1",
+		"svelte-fast-marquee": "^0.8.0",
 		"sweetalert2": "^11.15.10"
 	}
 }

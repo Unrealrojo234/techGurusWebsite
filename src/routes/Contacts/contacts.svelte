@@ -130,21 +130,6 @@
 		resize: vertical;
 	}
 
-	.custom-button {
-		border: 1px solid teal;
-		transition: background-color 0.2s;
-	}
-
-	.custom-button:hover {
-		background-color: rgba(0, 128, 128, 0.2);
-		border-color: teal;
-	}
-
-	.custom-button:disabled {
-		opacity: 0.5;
-		cursor: not-allowed;
-	}
-
 	:global(.alert) {
 		background-color: transparent;
 		border: 1px solid;

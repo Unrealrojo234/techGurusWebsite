@@ -21,6 +21,7 @@
 		if (getSavedTheme()) {
 			if (getSavedTheme() == 'dark') {
 				backgroundColor = '#222428';
+				// backgroundColor = '#2e3a4d';
 				foregroundColor = 'aliceblue';
 			} else {
 				backgroundColor = 'white';

@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import Marquee from 'svelte-fast-marquee';
 
 	let skills = $state([]);
 
@@ -18,15 +19,15 @@
 	});
 </script>
 
+<br /><br />
 <main>
-	<br /><br />
-
 	<h2 class="display-4 mb-4" style="color: yellowgreen;">Our Expertise</h2>
 	<p>
 		We are a team of tech enthusiasts with a diverse range of skills and expertise. Our members come
 		from different backgrounds and have a wide variety of interests, which allows us to tackle a
 		broad spectrum of projects and challenges. Here are some of the key areas we specialize in:
 	</p>
+
 	<ul>
 		<li>Web Development</li>
 		<li>Mobile App Development</li>
@@ -48,17 +49,18 @@
 			<div class="scroll-container gradient-edges pause-on-hover">
 				<div class="scroll-text scroll-multiple">
 					<!-- svelte-ignore a11y_distracting_elements -->
-					<marquee behavior="scroll" direction="left">
+					<Marquee speed={80} pauseOnHover={true}>
 						{#each skills as skill}
 							<img src={skill.url} alt={skill.name} />
 						{/each}
-					</marquee>
+					</Marquee>
 				</div>
 			</div>
 		{:catch error}
 			<p>{error.message}</p>
 		{/await}
 	</div>
+	<br />
 	<p>
 		Whether you need a website, a mobile app, or a custom software solution, we have the skills and
 		expertise to bring your ideas to life. Our team is dedicated to delivering high-quality tech
@@ -74,7 +76,16 @@
 	img {
 		width: 4rem;
 		height: auto;
-		margin: 10px;
+		margin: 16px;
+	}
+
+	img:hover {
+		box-shadow:
+			0px 0px 1px whitesmoke,
+			1px 1px 1px whitesmoke,
+			3px 3px 0px whitesmoke,
+			3px 3px 0px gold,
+			3px 3px 0px black;
 	}
 
 	/* Basic scrolling container */
