@@ -59,7 +59,7 @@
 		<div class="row align-items-center">
 			<!-- Form Area -->
 			<div>
-				<h1 class="display-4 mb-4" style="color: yellowgreen;">Let's connect</h1>
+				<h1 class="display-4 mb-4" style="color: yellowgreen;">Let's connect 🤝🏼</h1>
 
 				<form onsubmit={sendEmail} class="p-2 rounded">
 					<div>

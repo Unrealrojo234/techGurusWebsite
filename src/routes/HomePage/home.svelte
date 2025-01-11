@@ -2,6 +2,7 @@
 	import SlideShow from './SlideShow.svelte';
 	import Contacts from '../Contacts/contacts.svelte';
 	import Skills from './Skills/Skills.svelte';
+	import Footer from '../Footer/footer.svelte';
 </script>
 
 <main class="container-fluid">
@@ -19,16 +20,18 @@
 	<SlideShow />
 	<Skills />
 	<Contacts />
+	<Footer />
 </main>
 
 <style>
 	#title {
-		font-size: 3rem;
+		font-size: 4rem;
 		background: linear-gradient(45deg, yellow, teal, lime, gold);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text; /* For Firefox */
 		color: transparent;
+		font-weight: 600;
 	}
 	p {
 		font-size: larger;
@@ -36,5 +39,6 @@
 
 	main {
 		max-width: 68rem;
+		padding-bottom: 2px;
 	}
 </style>

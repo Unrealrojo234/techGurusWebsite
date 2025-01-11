@@ -17,31 +17,34 @@
 				console.error(error);
 			});
 	});
+
+	let expertise = [
+		'Web Development',
+		'Mobile App Development',
+		'Artificial Intelligence',
+		'Cloud Computing',
+		'UI/UX Design',
+		'Software Engineering',
+		'Cyber security'
+	];
 </script>
 
 <br /><br />
 <main>
-	<h2 class="display-4 mb-4" style="color: yellowgreen;">Our Expertise</h2>
+	<h2 class="display-4 mb-4" style="color: yellowgreen;">Our Expertise ⚙️</h2>
 	<p>
 		We are a team of tech enthusiasts with a diverse range of skills and expertise. Our members come
 		from different backgrounds and have a wide variety of interests, which allows us to tackle a
 		broad spectrum of projects and challenges. Here are some of the key areas we specialize in:
 	</p>
 
-	<ul>
-		<li>Web Development</li>
-		<li>Mobile App Development</li>
-		<li>Machine Learning</li>
-		<li>Artificial Intelligence</li>
-		<li>Cloud Computing</li>
-		<li>Internet of Things (IoT)</li>
-		<li>Blockchain Technology</li>
-		<li>UI/UX Design</li>
-		<li>Software Engineering</li>
-		<li>Cyber security</li>
-	</ul>
+	<div id="skills">
+		{#each expertise as data}
+			<p><i class="fa-solid fa-circle-check" style="color: teal;"></i>&nbsp;&nbsp;{data}</p>
+		{/each}
+	</div>
 	<div>
-		<h2 class="display-4 mb-4" style="color: yellowgreen;">Tools</h2>
+		<h2 class="display-4 mb-4" style="color: yellowgreen;">Tools 🧰</h2>
 		{#await skills}
 			<p>loading...</p>
 		{:then skills}
@@ -79,13 +82,12 @@
 		margin: 16px;
 	}
 
-	img:hover {
-		box-shadow:
-			0px 0px 1px whitesmoke,
-			1px 1px 1px whitesmoke,
-			3px 3px 0px whitesmoke,
-			3px 3px 0px gold,
-			3px 3px 0px black;
+	#skills {
+		padding-left: 20px;
+	}
+
+	#skills p {
+		font-size: 1.5cap;
 	}
 
 	/* Basic scrolling container */
