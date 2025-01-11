@@ -179,7 +179,7 @@
 		min-width: 100%;
 		padding: 1em;
 		min-height: 22rem;
-		border: 1px solid teal;
+		border: 2px solid teal;
 		text-align: center;
 	}
 </style>

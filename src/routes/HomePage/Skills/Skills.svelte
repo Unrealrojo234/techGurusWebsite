@@ -52,7 +52,7 @@
 			<div class="scroll-container gradient-edges pause-on-hover">
 				<div class="scroll-text scroll-multiple">
 					<!-- svelte-ignore a11y_distracting_elements -->
-					<Marquee speed={80} pauseOnHover={true}>
+					<Marquee speed={80}>
 						{#each skills as skill}
 							<img src={skill.url} alt={skill.name} />
 						{/each}

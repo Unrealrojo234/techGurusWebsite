@@ -115,7 +115,7 @@
 	.custom-input,
 	.custom-textarea {
 		background: none;
-		border: 1px solid teal;
+		border: 2px solid teal;
 	}
 
 	.custom-input:focus,
@@ -146,6 +146,6 @@
 	}
 
 	form {
-		border: 1px solid teal;
+		border: 2px solid teal;
 	}
 </style>
