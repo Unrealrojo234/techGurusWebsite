@@ -16,7 +16,8 @@
 		'Rosalie-p',
 		'Mary-desig',
 		'Fancy-nateku',
-		'Chegejohnngatia'
+		'Chegejohnngatia',
+		'weldon-ai'
 	];
 
 	let usersDetailsObject = writable([]);
