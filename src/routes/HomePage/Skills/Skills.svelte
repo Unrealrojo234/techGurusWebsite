@@ -11,7 +11,7 @@
 			.then((res) => res.json())
 			.then((data) => {
 				skills = data;
-				console.log(data);
+				//console.log(data);
 			})
 			.catch((error) => {
 				console.error(error);
