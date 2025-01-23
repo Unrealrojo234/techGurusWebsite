@@ -70,6 +70,7 @@
 		font-size: var(--size);
 		user-select: none;
 		fill: var(--color);
+		z-index: 100;
 	}
 
 	.container .moon {

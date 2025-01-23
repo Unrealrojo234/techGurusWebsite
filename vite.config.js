@@ -6,5 +6,8 @@ export default defineConfig({
 
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}']
+	},
+	server: {
+		host: '0.0.0.0'
 	}
 });

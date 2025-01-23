@@ -16,7 +16,7 @@ export async function GET({ url }) {
 	try {
 		const { data, error } = await resend.emails.send({
 			from: 'Tech It <onboarding@resend.dev>',
-			to: [`${recipient_email}`],
+			to: ['ryanotieno00001@gmail.com', 'tonyodhiambo419@gmail.com', 'gore6429@gmail.com'],
 			subject: 'Tech It',
 			html: `
             <h1 style='text-align:center;color:rebeccapurple;'>Tech Gurus Message</h1>
